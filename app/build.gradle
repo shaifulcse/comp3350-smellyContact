@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.contacts'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.contacts"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    // Two build flavors = two database types.
+    // Pick one in Android Studio: Build > Select Build Variant (realDebug / fakeDebug).
+    flavorDimensions "database"
+    productFlavors {
+        real {
+            dimension "database"
+            buildConfigField "boolean", "USE_FAKE_DB", "false"
+        }
+        fake {
+            dimension "database"
+            applicationIdSuffix ".fake"
+            versionNameSuffix "-fake"
+            buildConfigField "boolean", "USE_FAKE_DB", "true"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    testImplementation 'junit:junit:4.13.2'
+}

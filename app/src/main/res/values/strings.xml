@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <string name="database_in_use">Database: %1$s</string>
+
+    <string name="add_contact">Add contact</string>
+    <string name="delete_contact">Delete contact</string>
+    <string name="update_contact">Update contact</string>
+    <string name="show_all_contacts">Show all contacts</string>
+    <string name="search_contacts">Search contacts</string>
+
+    <string name="title_add_contact">Add contact</string>
+    <string name="title_update_contact">Update contact</string>
+    <string name="title_delete_contact">Delete contact</string>
+    <string name="title_all_contacts">All contacts</string>
+    <string name="title_search_contacts">Search contacts</string>
+
+    <string name="instructions_view">Tap a contact to see details.</string>
+    <string name="instructions_delete">Tap the contact you want to delete.</string>
+    <string name="instructions_update">Tap the contact you want to update.</string>
+    <string name="instructions_search">Type a name, email or phone number.</string>
+
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_phone">Phone</string>
+    <string name="hint_search">Search</string>
+
+    <string name="save">Save</string>
+    <string name="save_changes">Save changes</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+
+    <string name="no_contacts">No contacts found.</string>
+    <string name="contact_added">Contact added</string>
+    <string name="contact_updated">Contact updated</string>
+    <string name="contact_deleted">Contact deleted</string>
+    <string name="contact_not_found">Contact no longer exists</string>
+    <string name="confirm_delete">Delete %1$s? This cannot be undone.</string>
+    <string name="contact_details">Email: %1$s\nPhone: %2$s</string>
+</resources>

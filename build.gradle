@@ -1,0 +1,14 @@
+plugins {
+    id 'com.android.application' version '8.5.2' apply false
+}
+
+// Windows only: keep Gradle's build output in a short folder outside the project.
+// Android build outputs (app/build/intermediates/...) nest very deeply and can pass
+// Windows' 260-character path limit. On macOS/Linux nothing changes.
+if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+    def base = System.getenv('LOCALAPPDATA') ?: System.getProperty('java.io.tmpdir')
+    def id = Integer.toHexString(rootDir.canonicalPath.hashCode())
+    allprojects {
+        layout.buildDirectory.set(new File(base, "gb/${id}/${project.name}"))
+    }
+}
